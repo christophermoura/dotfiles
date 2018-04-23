@@ -203,7 +203,7 @@
     attributesfile = ~/.gitattributes
     autocrlf = input
     excludesfile = ~/.gitignore
-    editor = code -w
+    editor = subl -w
 
 [diff]
     tool = vscode
@@ -271,7 +271,7 @@
 
 	autocorrect = 1
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
