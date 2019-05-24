@@ -58,11 +58,14 @@ unset -f source_bash_files
 clear
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
 
 export WORKON_HOME=~/.ve
 export PROJECT_HOME=~/workspace
 eval "$(pyenv init -)"
-#pyenv virtualenvwrapper_lazy
+pyenv virtualenvwrapper_lazy
+
 
 eval "$(hub alias -s)"
 
