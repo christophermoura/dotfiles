@@ -79,4 +79,6 @@ export PATH="/usr/local/opt/libiconv/bin:$PATH"
 export PATH="/usr/local/php5/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/Users/christopher/.local/bin:$PATH"
+
 clear
