@@ -62,16 +62,18 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export WORKON_HOME=~/.ve
 export PROJECT_HOME=~/workspace
 eval "$(pyenv init -)"
-pyenv virtualenvwrapper_lazy
+#pyenv virtualenvwrapper_lazy
 
-eval "$(thefuck --alias)"
 eval "$(hub alias -s)"
 
-if [ -f ~/hub.bash_completion ]; then
-  . ~/hub.bash_completion
-fi
+#if [ -f ~/hub.bash_completion ]; then
+#  . ~/hub.bash_completion
+#fi
+
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
 export PATH="/usr/local/php5/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
 clear
