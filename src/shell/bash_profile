@@ -69,9 +69,9 @@ pyenv virtualenvwrapper_lazy
 
 eval "$(hub alias -s)"
 
-#if [ -f ~/hub.bash_completion ]; then
-#  . ~/hub.bash_completion
-#fi
+if [ -f ~/hub.bash_completion ]; then
+  . ~/hub.bash_completion
+fi
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
