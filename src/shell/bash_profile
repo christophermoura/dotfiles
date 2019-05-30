@@ -69,11 +69,11 @@ pyenv virtualenvwrapper_lazy
 
 eval "$(hub alias -s)"
 
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
 if [ -f ~/hub.bash_completion ]; then
   . ~/hub.bash_completion
 fi
-
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
 export PATH="/usr/local/php5/bin:$PATH"
