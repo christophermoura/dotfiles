@@ -8,7 +8,7 @@ source_bash_files() {
 
     declare -r -a FILES_TO_SOURCE=(
         "bash_aliases"
-        #"bash_autocomplete"
+        "./autocomplete/macos/bash_autocomplete"
         "bash_exports"
         "bash_functions"
         "bash_options"
@@ -69,17 +69,13 @@ pyenv virtualenvwrapper_lazy
 
 eval "$(hub alias -s)"
 
-#[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-
 if [ -f ~/hub.bash_completion ]; then
   . ~/hub.bash_completion
 fi
 
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion || {
-    # if not found in /usr/local/etc, try the brew --prefix location
-    [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] && \
-        . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
-}
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+complete -o default -o nospace -F _git g
 
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
 export PATH="/usr/local/php5/bin:$PATH"
