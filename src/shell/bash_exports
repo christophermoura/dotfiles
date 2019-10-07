@@ -76,13 +76,3 @@ export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 # Make Python use UTF-8 encoding for output to stdin/stdout/stderr.
 
 export PYTHONIOENCODING="UTF-8"
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Environment variables for Twitter Cleanup (https://github.com/cuducos/twitter-cleanup)
-
-export TWITTER_CONSUMER_KEY="KVEBQoyUhBIb9PsXw0sL7khRs"
-export TWITTER_CONSUMER_SECRET="vosuSnOIuoOX5RUwjdTEEGq0oyc0f6FMeloud11PD83EK2MPfl"
-export TWITTER_ACCESS_TOKEN_KEY="14422605-dgQKZxfmiwJ6XSsb2EJ6fTeoJKBhVvXijYBJixoCE"
-export TWITTER_ACCESS_TOKEN_SECRET="rj1kSfYLz4zcWOaxLBagpEZeZRRA6cGmx2PWmDvhVMypY"
-export BOTOMETER_MASHAPE_KEY="sT4pDueKOrmshd7SNEJHJ7s2aoTap1m6lLUjsnG427R5sQGRLf"
