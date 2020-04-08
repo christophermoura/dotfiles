@@ -56,22 +56,22 @@ unset -f source_bash_files
 # and time of the last login, the message of the day, etc.).
 
 clear
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 
-export WORKON_HOME=~/.ve
-export PROJECT_HOME=~/workspace
-eval "$(pyenv init -)"
-pyenv virtualenvwrapper_lazy
+# export WORKON_HOME=~/.ve
+# export PROJECT_HOME=~/workspace
+# eval "$(pyenv init -)"
+# pyenv virtualenvwrapper_lazy
 
 
-eval "$(hub alias -s)"
-
-if [ -f ~/hub.bash_completion ]; then
-  . ~/hub.bash_completion
-fi
+# eval "$(hub alias -s)"
+# 
+# if [ -f ~/hub.bash_completion ]; then
+#   . ~/hub.bash_completion
+# fi
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
