@@ -56,15 +56,23 @@ unset -f source_bash_files
 # and time of the last login, the message of the day, etc.).
 
 clear
+#export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+PATH="$(brew --prefix tcl-tk)/bin:$PATH" \
+LDFLAGS="-L$(brew --prefix tcl-tk)/lib" \
+CPPFLAGS="-I$(brew --prefix tcl-tk)/include" \
+PKG_CONFIG_PATH="$(brew --prefix tcl-tk)/lib/pkgconfig" \
+CFLAGS="-I$(brew --prefix tcl-tk)/include" \
+PYTHON_CONFIGURE_OPTS="--with-tcltk-includes='-I$(brew --prefix tcl-tk)/include' --with-tcltk-libs='-L$(brew --prefix tcl-tk)/lib -ltcl8.6 -ltk8.6'" \
+
 # if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 # if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 
-# export WORKON_HOME=~/.ve
-# export PROJECT_HOME=~/workspace
-# eval "$(pyenv init -)"
-# pyenv virtualenvwrapper_lazy
+export WORKON_HOME=~/.ve
+export PROJECT_HOME=~/projects
+eval "$(pyenv init -)"
+pyenv virtualenvwrapper_lazy
 
 
 # eval "$(hub alias -s)"
@@ -84,3 +92,14 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/Users/christopher/.local/bin:$PATH"
 
 clear
+
+#export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+#export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
+#export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+
+#export PATH
+
+# Setting PATH for Python 3.8
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
+export PATH
