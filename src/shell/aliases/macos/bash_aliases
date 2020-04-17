@@ -86,3 +86,10 @@ alias hide-drop-shadow="defaults write com.apple.screencapture disable-shadow -b
 
 alias show-drop-shadow="defaults write com.apple.screencapture disable-shadow -bool false \
                             && killall SystemUIServer"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Delete repeated files
+# Source: https://medium.com/@crp_underground/dicas-%C3%BAteis-para-terminal-linux-906d7f2b2698
+
+alias ds_clear="find . -name '.DS_Store' -exec rm {} \;"
